@@ -1,0 +1,51 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            Read the instructions carefully
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            One step more to go
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="ml20">
+                        <h3>{{quiz ? quiz.title : ""}}</h3>
+                        <p>{{quiz ? quiz.description : ""}}</p>
+
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h3>Important instructions</h3>
+
+                        <ul>
+                            <li>This test is only for practice purpose</li>
+                            <li>You have to submit the quiz within {{quiz ? quiz.numberOfQuestions*2 : ""}}  minutes</li>
+                            <li>You can attempt the quiz any number of times</li>
+                            <li>There are {{quiz ? quiz.numberOfQuestions : ""}} questions in this quiz</li>
+                            <li>Each question carries {{(quiz ? quiz.maxMarks : "" )/(quiz ? quiz.numberOfQuestions : "")}} marks</li>
+                            <li>No negative marking in this quiz</li>
+                            <li>All questions are MCQs</li>
+                        </ul>
+
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h3>Attempting Quiz</h3>
+                        <ul>
+                            <li>The quizzes consists of questions carefully designed to help you self-assess your comprehension of the information presented on the topics covered in the module.</li> 
+                            <li>No data will be collected on the website regarding your responses or how many times you take the quiz.</li>
+                            <li>Each question in the quiz is of multiple-choice or "true or false" format. </li>
+                            <li>Read each question carefully, and click on the button next to your response that is based on the information covered on the topic in the module.</li> 
+                            <li>Each correct or incorrect response will result in appropriate feedback immediately at the bottom of the screen.</li>
+                        </ul>
+
+                    </mat-card-content>
+                    <mat-card-actions class="text-center">
+                        <button mat-raised-button color="primary" (click)="startQuiz()" >Start Quiz</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

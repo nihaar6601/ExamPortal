@@ -1,0 +1,40 @@
+<!-- <p>review-result works!</p>
+<p>{{questions[0] | json}}</p> -->
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let q of questions">
+                <mat-card class="mt20" >
+                    <mat-card-header>
+                        <mat-card-subtitle>
+                            {{q.content}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="mt20">
+                        <p>Given Answer : <b>{{q.givenAnswer}}</b></p>
+                        <p>Correct Answer : <b>{{q.answer}}</b></p>
+                        
+                    </mat-card-content>
+                    <mat-card-actions>
+                         <div *ngIf= "q.correct ; else wrong">
+                            <div style="background-color:greenyellow">
+                                
+                                <mat-icon>check</mat-icon>
+                            </div>
+                        </div>
+
+                        <ng-template #wrong>
+                        <div style="background-color:red">
+                            <mat-icon>close</mat-icon>
+                            
+                        </div>
+                    </ng-template>
+                    </mat-card-actions>
+                </mat-card>
+                
+            </div>
+            <button [routerLink]="['/user/0']" mat-raised-button color="primary" class="text-center mt20">Home</button>
+        </div>
+    </div>
+</div>

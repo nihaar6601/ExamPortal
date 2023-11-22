@@ -1,0 +1,12 @@
+<h1>OTP</h1>
+
+<small *ngIf = "errorMessage" class="text-danger">
+    {{errorMessage.message}}
+</small>
+<div>
+    <form (ngSubmit)="verify()">
+        <input type="number" required placeholder="Enter OTP here" name="otp" [(ngModel)]="otp">
+        <button type="submit">Verify</button>
+        
+    </form>
+</div>

@@ -1,0 +1,55 @@
+<mat-card *ngIf = "user">
+    
+    <!-- {{user | json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="profile" class="src" class = "profile-image">
+                </div>
+
+                <h1 class="mt20 text-center">{{user.firstName}} {{user.lastName}}</h1>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class= "table text-center" >
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>UserId</td>
+                                <td>{{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </mat-card-content>
+
+    
+    <div class="container text-center mt20">
+        <button mat-raised-button color="primary" class="mb20">
+            UPDATE
+        </button>
+
+        <button mat-raised-button color="accent" class="ml20 mb20">
+            SHARE
+        </button>
+    </div>
+    
+</mat-card>

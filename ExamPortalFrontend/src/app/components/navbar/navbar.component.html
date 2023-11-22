@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="icon" routerLink="">
+      <mat-icon>menu_book</mat-icon>
+    </button>
+    <span>Portal</span>
+    <span class="spacer"></span>
+
+    <button *ngIf ="!isLoggedIn" mat-button routerLink="/login">Login</button>
+    <button *ngIf ="!isLoggedIn" mat-button routerLink="/signUp">Register</button>
+    <button *ngIf ="isLoggedIn" mat-button (click)= "logoutUser()">Logout</button>
+    <button *ngIf ="isLoggedIn" mat-button>{{loginService.getUser().firstName}}</button>
+
+    <!-- <div *ngIf = "isLoggedIn; else logout">
+      <button mat-button (click)= "logoutUser()">Logout</button>
+    </div> -->
+
+    <!-- <ng-template #logout>
+      <button mat-button routerLink="login">Login</button>
+      <button mat-button routerLink="signUp">Register</button>
+    </ng-template> -->
+
+</mat-toolbar>
+
+  <!-- <div *ngIf = "emailSent; else emailNotSent">
+    <button type = "submit" disabled>Send OTP</button>
+</div>
+
+<ng-template #emailNotSent>
+    <button type = "submit" >Send OTP</button>
+</ng-template> -->
