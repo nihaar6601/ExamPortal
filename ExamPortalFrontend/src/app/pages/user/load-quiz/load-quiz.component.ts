@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class LoadQuizComponent {
   public catId:any;
-  public quizzes=[];
+  public quizzes:any = [];
   constructor(private route:ActivatedRoute , private quizService:QuizService){}
 
   ngOnInit(){

@@ -7,21 +7,21 @@
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>
                         <mat-card-title>
-                            {{q['title']}}
+                            {{q.title}}
                         </mat-card-title>
                         <mat-card-subtitle>
-                            {{q['category.title']}}
+                            {{q.category.title}}
                         </mat-card-subtitle>
                     </mat-card-header>
                     <mat-card-content>
-                        <p class="truncate">{{q['description']}}</p>
+                        <p class="truncate">{{q.description}}</p>
                     </mat-card-content>
 
                     <mat-card-actions>
                         <button mat-raised-button color="primary">View</button>
                         <button mat-raised-button color="accent" class="ml10" [routerLink]="['/user/instructions/' , q['qId']]" >Start</button>
-                        <button mat-button color="accent">Qs :{{q['numberOfQuestions']}}</button>
-                        <button mat-button color="accent">M :{{q['maxMarks']}}</button>
+                        <button mat-button color="primary">Qs :{{q.numberOfQuestions}}</button>
+                        <button mat-button color="primary">M :{{q.maxMarks}}</button>
 
                     </mat-card-actions>
                 </mat-card>
